@@ -46,13 +46,15 @@ print_r($temperature);
 
 $lowTemp = array_slice($temperature, 0 , 5);
 
+$lowTemp = implode (" , " , $lowTemp);
+
 echo " The 5 lowest recorded temperatures in January were " . $lowTemp . " degrees. ";
 
-print_r ($lowTemp);
+echo "<br>";
 
 //High temperature
 $highTemp = array_slice($temperature, -5, 5);
 
-echo " The 5 highest recorded temperatures in January were " . $highTemp . " degrees. ";
+$highTemp = implode (" , " , $highTemp);
 
-print_r ($highTemp);
+echo " The 5 highest recorded temperatures in January were " . $highTemp . " degrees. ";
